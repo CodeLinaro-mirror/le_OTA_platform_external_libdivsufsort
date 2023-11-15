@@ -123,7 +123,7 @@ ss_isqrt(saidx_t x) {
     y = (y + 1 + x / y) >> 1;
   } else if(e >= 8) {
     y = (sqq_table[x >> ((e - 6) - (e & 1))] >> (7 - (e >> 1))) + 1;
-  } else {
+  } else if(x < 256) {
     return sqq_table[x] >> 4;
   }
 
