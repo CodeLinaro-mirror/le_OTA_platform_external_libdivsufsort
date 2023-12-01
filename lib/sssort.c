@@ -106,7 +106,7 @@ static const saint_t sqq_table[256] = {
 static INLINE
 saidx_t
 ss_isqrt(saidx_t x) {
-  saidx_t y, e;
+  saidx_t y = 1, e;
 
   if(x >= (SS_BLOCKSIZE * SS_BLOCKSIZE)) { return SS_BLOCKSIZE; }
   e = (x & 0xffff0000) ?
