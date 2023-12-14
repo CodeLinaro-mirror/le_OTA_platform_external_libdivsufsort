@@ -112,7 +112,7 @@ saint_t
 inverse_bw_transform(const sauchar_t *T, sauchar_t *U, saidx_t *A,
                      saidx_t n, saidx_t idx) {
   saidx_t C[ALPHABET_SIZE];
-  sauchar_t D[ALPHABET_SIZE];
+  sauchar_t D[ALPHABET_SIZE] = {0};
   saidx_t *B;
   saidx_t i, p;
   saint_t c, d;

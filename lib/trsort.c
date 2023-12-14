@@ -376,7 +376,7 @@ tr_introsort(saidx_t *ISA, const saidx_t *ISAd,
             STACK_POP5(ISAd, first, last, limit, trlink);
           }
         }
-      } else if(limit == -2) {
+      } else if(limit == -2 && ssize > 0) {
         /* tandem repeat copy */
         a = stack[--ssize].b, b = stack[ssize].c;
         if(stack[ssize].d == 0) {
